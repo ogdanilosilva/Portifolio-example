@@ -1,0 +1,185 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header .menu {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .menu-line {
+    height: 3px;
+    background-color: #ddd;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left--side {
+    flex: 1;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.profession {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 75px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.buttons a {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 16px;
+    background-color: #333;
+    color: #CCC;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0px 0px 4px #111;
+    margin-right: 10px;
+}
+
+.buttons a:nth-child(2) {
+    color: #333;
+    background-color: #ccc;
+    box-shadow: 0px 0px 4px #111;
+}
+
+.buttons a:nth-child(2):hover {
+    opacity: 0.8;
+}
+
+.right--side {
+    flex: 1;
+    background-image: url('../images/person.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    color: #000;
+    font-size: 13px;
+}
+
+footer a {
+    color: #000;
+}
+
+@media (max-width: 850px) {
+
+    header {
+        position: initial;
+        background-color: #ccc;
+        border: 1px solid #ccc;
+    }
+
+    .menu-line {
+        background-color: #000;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    header .menu-line {
+        background-color: #000;
+    }
+
+    .left--side {
+        flex: none;
+        padding: 30px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        position: initial;
+        color: #fff;
+        font-size: 16px;
+        background-color: #060709;
+    }
+
+    footer a{
+        color: #fff;
+    }
+
+}
+
+@media (max-width:450px) {
+
+    .name {
+        font-size: 45px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons a{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    header .menu-line {
+        background-color: #000;
+    }
+
+    .right--side {
+        background-position: 100%  auto;
+    }
+
+    footer {
+        background-color: #060709;
+        color: #fff;
+        border: 1px solid #000;
+        margin-top: -2px;
+    }
+}
